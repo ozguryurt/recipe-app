@@ -38,11 +38,11 @@ class RecipeCard extends StatelessWidget {
             Text('${recipe.cuisine} cuisine'),
             Row(
               children: [
-                const Icon(Icons.timer, size: 16),
+                const Icon(Icons.schedule, size: 16),
                 const SizedBox(width: 4),
                 Text('${recipe.prepTimeMinutes + recipe.cookTimeMinutes} mins'),
                 const SizedBox(width: 8),
-                const Icon(Icons.fireplace, size: 16, color: Colors.redAccent),
+                const Icon(Icons.local_fire_department, size: 16, color: Colors.redAccent),
                 const SizedBox(width: 4),
                 Text('${recipe.caloriesPerServing} kcal'),
                 const SizedBox(width: 8),

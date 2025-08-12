@@ -3,7 +3,7 @@ import 'package:recipeapp/models/recipe_model.dart';
 import 'package:recipeapp/services/recipe_service.dart';
 import 'package:recipeapp/widgets/error_card.dart';
 import 'package:recipeapp/widgets/recipe_card.dart';
-import 'package:recipeapp/widgets/recipe_refresh_card.dart';
+import 'package:recipeapp/widgets/recipes_refresh_card.dart';
 
 class RecipesScreen extends StatefulWidget {
   const RecipesScreen({super.key});
@@ -68,7 +68,7 @@ class _RecipesScreenState extends State<RecipesScreen> {
               Expanded(
                 child: Column(
                   children: [
-                    RecipeRefreshCard(recipeCount: recipes.length, isLoading: isLoading, onRefresh: _loadRecipes),
+                    RecipesRefreshCard(recipeCount: recipes.length, isLoading: isLoading, onRefresh: _loadRecipes),
                     const SizedBox(height: 16),
                     Expanded(
                       child: recipes.isEmpty

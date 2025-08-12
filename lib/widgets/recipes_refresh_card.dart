@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class RecipeRefreshCard extends StatelessWidget {
+class RecipesRefreshCard extends StatelessWidget {
   final int recipeCount;
   final bool isLoading;
   final Function() onRefresh;
-  const RecipeRefreshCard(
+  const RecipesRefreshCard(
       {super.key,
       required this.recipeCount,
       required this.isLoading,

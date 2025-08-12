@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:recipeapp/models/recipe_model.dart';
 
 class RecipeCard extends StatelessWidget {
@@ -55,7 +56,7 @@ class RecipeCard extends StatelessWidget {
         trailing: const Icon(Icons.arrow_forward_ios),
         onTap: () {
           // Navigate to recipe detail
-          // Navigator.push(...);
+          context.push('/recipes/${recipe.id}');
         },
       ),
     );

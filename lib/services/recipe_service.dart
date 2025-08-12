@@ -9,12 +9,7 @@ class RecipeService {
   static Future<List<RecipeModel>> getRecipes() async {
     try {
       final uri = Uri.parse('$baseUrl/recipes');
-      final response = await http.get(
-        uri,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      );
+      final response = await http.get(uri).timeout(const Duration(seconds: 25));
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = json.decode(response.body);
@@ -23,6 +18,25 @@ class RecipeService {
         return recipesJson
             .map((recipeJson) => RecipeModel.fromJson(recipeJson))
             .toList();
+      } else {
+        throw Exception('Error: ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Network error: $e');
+    }
+  }
+
+  // Get recipe by id
+  static Future<RecipeModel> getRecipeById(int id) async {
+    try {
+      final uri = Uri.parse('$baseUrl/recipes/$id');
+      final response = await http.get(uri).timeout(const Duration(seconds: 25));
+
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = json.decode(response.body);
+        final RecipeModel recipe = RecipeModel.fromJson(data);
+        
+        return recipe;
       } else {
         throw Exception('Error: ${response.statusCode}');
       }

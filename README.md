@@ -2,6 +2,15 @@
 
 A beautiful and modern Flutter recipe application that fetches recipes from an external API and displays them with a sleek, user-friendly interface.
 
+## 📸 Screenshots
+
+### Recipe List Screen and Recipe Detail Screen
+
+<p float="left">
+  <img src="https://ozguryurt.dev/images/projeler/recipeapp_mobile2.png" width="300" style="margin-right: 10px;" />
+  <img src="https://ozguryurt.dev/images/projeler/recipeapp_mobile3.png" width="300" />
+</p>
+
 ## 📱 Features
 
 ### 🏠 Recipe List Screen
